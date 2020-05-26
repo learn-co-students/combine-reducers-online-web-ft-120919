@@ -15,7 +15,6 @@ export class AuthorInput extends Component {
     });
   }
 
-
   handleOnSubmit = event => {
     event.preventDefault();
     const author = {...this.state, id: uuid() };
@@ -29,11 +28,9 @@ export class AuthorInput extends Component {
     return(
       <form onSubmit={(event) => this.handleOnSubmit(event)}>
         <p>
-          <input
-            type="text"
+          <input  type="text"
             onChange={(event) => this.handleOnChange(event)}
-            name="authorName"
-            value={this.state.authorName}
+            name="authorName"  value={this.state.authorName}
             placeholder="author name" />
         </p>
         <input type="submit" />
